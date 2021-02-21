@@ -1,0 +1,19 @@
+<h1>Flats</h1>
+<ul>
+  <% @flats.each do |flat| %>
+  <li>
+    <%#= link_to 'ANCHOR', ANCHOR_URL %>
+
+    <%= link_to flat_path(flat["id"]) do %>
+
+      <h2><%= flat["name"] %></h2>
+      <div>
+        <%= flat["price"] %>
+        <%= flat["priceCurrency"] %>
+      </div>
+      <img src="<%= flat["imageUrl"] %>" alt="">
+
+    <% end %>
+  </li>
+  <% end %>
+</ul>
